@@ -1,0 +1,50 @@
+<header id="header" class="header row fixed-top d-flex align-items-center header-scrolled">
+
+    <div class=" col-2 align-items-center ">
+        <a href="/" class="logo d-flex align-items-center justify-content-center">
+            <span class="d-none d-lg-block"><em>Online</em> School</span>
+        </a>
+    </div>
+    <!-- End Logo -->
+
+
+    <nav class="header-nav col-10  ms-auto fs-6 fw-bolder ">
+        <div class="row">
+            <ul class="d-flex col-6 align-items-center justify-content-center">
+                <li>
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search w-100">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+              </button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <ul class="d-flex col-6 align-items-center justify-content-end">
+
+                <li class="nav-item">
+
+                    <a *ngIf="!isAuthenticated" [routerLink]="['trainer/login']" routerLinkActive="active" class="nav-link">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a *ngIf="!isAuthenticated" [routerLink]="['trainer/register']" routerLinkActive="active" class="nav-link">Register</a>
+                </li>
+
+                <li class="nav-item pe-3 ">
+                    <button *ngIf="isAuthenticated" class="nav-link btn-danger pe-3">Logout
+                    </button>
+                </li>
+                <!-- End Profile Nav -->
+            </ul>
+        </div>
+
+
+    </nav>
+    <!-- End Icons Navigation -->
+
+</header>

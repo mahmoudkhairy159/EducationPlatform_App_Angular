@@ -1,0 +1,73 @@
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Course Enrollment Requests</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Home</a></li>
+                <li class="breadcrumb-item "><a>Courses</a>
+                </li>
+                <li class="breadcrumb-item active"><a>View Course</a>
+                </li>
+                <li class="breadcrumb-item active"><a>Course Enrollment Requests</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- End Page Title -->
+
+
+
+    <section class="section">
+        <div class="row">
+
+            <div class="col-lg-12">
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <a class="btn btn-outline-primary m-2">New
+                          Student<i class="fa-sharp fa-solid fa-plus"></i> </a>
+                        <!-- Table with hoverable rows -->
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center">ID</th>
+                                    <th scope="col" class="text-center">Picture</th>
+                                    <th scope="col" class="text-center">Name</th>
+                                    <th scope="col" class="text-center"> phone</th>
+                                    <th scope="col" class="text-center"> nationalId</th>
+                                    <th scope="col" class="text-center"> Actions</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr *ngfor="let student of students">
+                                    <th scope="row" class="text-center align-middle">{{ student .id}}</th>
+                                    <td class="text-center align-middle"><img src="{{ student. studentProfile.photo}}" style="width:100px; height:100px;" alt="..." class="rounded "></td>
+                                    <td class="text-center align-middle">{{ student.name}}</td>
+                                    <td class="text-center align-middle">{{ student.phone}}</td>
+                                    <td class="text-center align-middle">
+                                        {{ student.studentProfile.nationalId}}</td>
+
+                                    <td class="text-center align-middle">
+                                        <a class="btn btn-success "><i class="fa-sharp fa-solid fa-check"></i> </a>
+                                        <a class="btn btn-danger "> <i class="fa-solid  fa-xmark"></i></a>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- End Table with hoverable rows -->
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+</main>
+<!-- End #main -->

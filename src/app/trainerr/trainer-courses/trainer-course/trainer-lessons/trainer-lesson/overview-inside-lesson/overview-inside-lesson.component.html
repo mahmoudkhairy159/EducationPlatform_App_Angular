@@ -1,0 +1,104 @@
+<div class="tab-pane fade show active lesson-overview " id="lesson-overview">
+    <div class="row  ">
+        <div class="col-6 ">
+            <h6> ID</h6>
+        </div>
+        <div class="col-6 ">
+            <p>{{lesson.id}}</p>
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+    <div class="row">
+        <div class="col-6 ">
+            <h6>Arabic Name</h6>
+        </div>
+        <div class="col-6">
+            <p>{{lesson.name_ar}}</p>
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+    <div class="row">
+        <div class="col-6 ">
+            <h6>English Name</h6>
+        </div>
+        <div class="col-6">
+            <p>{{lesson.name_en}}</p>
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+    <div class="row">
+        <div class="col-6 ">
+            <h6>Video</h6>
+        </div>
+        <div class="col-6">
+            <a class="rounded " download>Download <i class="fa-solid fa-download"></i></a>
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+    <div class="row">
+        <div class="col-6 ">
+            <h6>Material</h6>
+        </div>
+        <div class="col-6 ">
+            <a href="{{ lesson.material}}" class="rounded " download>Download <i
+                    class="fa-solid fa-download"></i></a>
+
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+
+    <div class="row">
+        <div class="col-6 ">
+            <h6>Assignment</h6>
+        </div>
+        <div class="col-6">
+            <a href="{{lesson.assignment}}" class="rounded " download>Download <i
+                    class="fa-solid fa-download"></i></a>
+
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+
+    <div class="row">
+        <div class="col-6 ">
+            <h6>Assignment Correct Answer</h6>
+        </div>
+        <div class="col-6">
+            <a href="{{lesson.assignmentCorrectAnswer}}" class="rounded " download>Download <i
+                    class="fa-solid fa-download"></i></a>
+
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+    <div class="row">
+        <div class="col-6 ">
+            <h6>Exam</h6>
+        </div>
+        <div class="col-6">
+
+            <a href="{{lesson.exam}}" class="rounded " download>Download <i
+                    class="fa-solid fa-download"></i></a>
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+    <div class="row">
+        <div class="col-6 ">
+            <h6>Exam Correct Answer</h6>
+        </div>
+        <div class="col-6">
+            <a href="{{lesson.examCorrectAnswer}}" class="rounded " download>Download <i
+                    class="fa-solid fa-download"></i></a>
+
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+    <div class="row">
+        <div class="col-6 ">
+            <h6>Exam Total Mark</h6>
+        </div>
+        <div class="col-6">
+            <p>{{lesson.examTotalMark}}</p>
+        </div>
+    </div>
+    <hr class="dropdown-divider">
+</div>

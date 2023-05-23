@@ -1,0 +1,84 @@
+<div class="col-12 " *ngIf="lesson">
+    <h1 class="text-center">{{lesson.name_en }}</h1>
+    <div class="tab-content text-center border ">
+        <div class="tab-pane active show">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center align-center order-1 order-lg-2">
+                    <video controls style="width: 100%; height:100%">
+                  <source src="{{lesson.video}}" type="video/mp4">
+              </video>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 details order-2 order-lg-1 text-center">
+                    <h3> {{ lesson.name_en}}</h3>
+                    <p class="fst-italic">{{ lesson.name_ar}}</p>
+                    <div class="row">
+                        <div class="col-6 ">
+                            <h6>Material</h6>
+                        </div>
+                        <div class="col-6 ">
+                            <a href="{{ lesson.material }}" class="rounded " download>Download <i
+                                      class="fa-solid fa-download"></i></a>
+                        </div>
+                    </div>
+                    <hr class="dropdown-divider">
+
+                    <div class="row">
+                        <div class="col-6 ">
+                            <h6>Assignment</h6>
+                        </div>
+                        <div class="col-6">
+                            <a href="{{ lesson.assignment}}" class="rounded " download>Download <i
+                                      class="fa-solid fa-download"></i></a>
+                        </div>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="row">
+                        <div class="col-6 ">
+                            <h6>Assignment Correct Answer</h6>
+                        </div>
+                        <div class="col-6">
+                            <a href="{{ lesson.assignmentCorrectAnswer}}" class="rounded " download>Download <i
+                                      class="fa-solid fa-download"></i></a>
+
+                        </div>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="row">
+                        <div class="col-6 ">
+                            <h6>Exam</h6>
+                        </div>
+                        <div class="col-6">
+
+                            <a href="{{ lesson.exam}}" class="rounded " download>Download <i
+                                      class="fa-solid fa-download"></i></a>
+                        </div>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="row">
+                        <div class="col-6 ">
+                            <h6>Exam Correct Answer</h6>
+                        </div>
+                        <div class="col-6">
+                            <a href="{{ lesson.examCorrectAnswer}}" class="rounded " download>Download <i
+                                      class="fa-solid fa-download"></i></a>
+
+                        </div>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="row">
+                        <div class="col-6 ">
+                            <h6>Exam Total Mark</h6>
+                        </div>
+                        <div class="col-6">
+                            <p>{{lesson.examTotalMark}}</p>
+                        </div>
+                    </div>
+                    <hr class="dropdown-divider">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

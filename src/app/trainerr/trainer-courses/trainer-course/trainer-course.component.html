@@ -1,0 +1,78 @@
+<main id="main" class="main pb-1 mb-1">
+    <div class="pagetitle">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a> Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a>Courses</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    <a href="">View Course"</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- End Page Title -->
+    <div class="row justify-content-center align-items-center">
+        <a class="btn btn-primary rounded-3 border-secondary col-auto">
+      Show Enrollment Requests
+      <i class="fa-solid fs-4 fa-computer-mouse"></i>
+    </a>
+    </div>
+    <section class="section course">
+        <div class="row card-group">
+            <div class="col-xl-5 card">
+                <div class="card-body course-card pt-4 d-flex flex-column align-items-center">
+                    <div class="main_image">
+                        <img src="{{ course.photo }}" id="main_course_image" width="350">
+                    </div>
+                    <div class="thumbnail_images">
+                        <ul id="thumbnail">
+                            <li>
+                                <img onclick="changeImage(this)" src="{{ course.photo }}" width="70">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 card">
+                <div class="card-body pt-3">
+                    <!-- Bordered Tabs -->
+                    <ul class="nav nav-tabs nav-tabs-bordered">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#course-overview">
+                Overview
+              </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#course-edit">
+                Edit Course
+              </button>
+                        </li>
+                        <li class="nav-item">
+                            <form class="d-inline">
+                                <button type="submit" class="btn btn-danger">
+                  Delete Course
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                            </form>
+                        </li>
+                    </ul>
+                    <div class="tab-content pt-2">
+
+                        <app-overview-inside-course></app-overview-inside-course>
+
+                        <app-edit-inside-course></app-edit-inside-course>
+                    </div>
+                    <!-- End Bordered Tabs -->
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+<!--<app-lessons></app-lessons>-->

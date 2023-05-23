@@ -1,0 +1,55 @@
+<main id="main" class="main pt-1 mt-1">
+
+
+
+    <section class="section">
+        <div class="pagetitle pb-3">
+            <h1>Lessons</h1>
+        </div>
+        <!-- End Page Title -->
+        <div class="row">
+
+            <div class="col-lg-12">
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <a class="btn btn-outline-primary m-2">New Lesson <i class="fa-sharp fa-solid fa-plus"></i> </a>
+                        <!-- Table with hoverable rows -->
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center">ID</th>
+                                    <th scope="col" class="text-center">English Name</th>
+                                    <th scope="col" class="text-center">Arabic Name</th>
+                                    <th scope="col" class="text-center">Material</th>
+                                    <th scope="col" class="text-center">Actions</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngfor="let lesson of lessons">
+                                    <th scope="row" class="text-center align-middle">{{lesson.id}}</th>
+                                    <td class="text-center align-middle">{{lesson.name_en}}</td>
+                                    <td class="text-center align-middle">{{lesson.name_ar}}</td>
+                                    <td class="text-center align-middle"><a class="rounded " download>Download <i class="fa-solid fa-download"></i></a></td>
+                                    <td class="text-center align-middle">
+                                        <a class="btn btn-success "><i class="fa-solid fa-eye"></i> </a>
+                                        <a class="btn btn-success "> <i class="fa-solid fa-pen-to-square"></i> </a>
+                                        <form class="d-inline">
+                                            <button type="submit" class="btn btn-danger "> <i class="fa-solid fa-trash"></i> </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- End Table with hoverable rows -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- End #main -->

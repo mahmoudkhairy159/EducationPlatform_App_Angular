@@ -1,0 +1,61 @@
+<div id="header" class="header row fixed-top d-flex align-items-center">
+
+    <div class=" col-2 align-items-center ">
+        <a href="" class="logo d-flex align-items-center justify-content-center">
+            <span class="d-none d-lg-block"><em>Online</em> School</span>
+        </a>
+    </div>
+    <!-- End Logo -->
+
+
+    <nav class="header-nav col-10 ms-auto fs-6 fw-bolder ">
+        <ul class="d-flex align-items-center justify-content-end">
+            <li class="nav-item ">
+                <a class="nav-link link-dark pe-4 " [routerLink]="['student/home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+            </li>
+            <li class="nav-item ">
+                <a class=" nav-link link-dark pe-4" [routerLink]="['student/about']" routerLinkActive="active">About</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link link-dark pe-4" [routerLink]="['student/courses']" routerLinkActive="active">Courses</a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link link-dark pe-4" [routerLink]="['student/mycourses']" routerLinkActive="active" *ngIf="isAuthenticated">My Courses</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link link-dark pe-4" [routerLink]="['student/trainers']" routerLinkActive="active">Trainers</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link link-dark pe-4" [routerLink]="['student/events']" routerLinkActive="active">Events</a>
+            </li>
+            <li class="nav-item ">
+                <a class=" nav-link link-dark pe-4" [routerLink]="['student/pricing']" routerLinkActive="active">Pricing</a>
+            </li>
+
+            <li><a [routerLink]="['student/contact']" class="nav-link link-dark pe-4" routerLinkActive="active">Contact</a></li>
+
+            <li class="nav-item">
+
+                <a [routerLink]="['student/login']" routerLinkActive="active" class="nav-link" *ngIf="!isAuthenticated">Login</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a [routerLink]="['student/register']" routerLinkActive="active" class="nav-link" *ngIf="!isAuthenticated">Register</a>
+            </li>
+            <li class="nav-item" *ngIf="user ">
+                <a *ngIf="isAuthenticated " routerLinkActive="active " [routerLink]="[ '/student/profile/',user.id] " class="nav-link ">Profile</a>
+            </li>
+            <li class="nav-item ">
+
+                <button class="nav-link btn-danger " (click)="onLogout() " *ngIf="isAuthenticated ">Logout
+                    </button>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- End Icons Navigation -->
+
+</div>
+<!-- End Header -->

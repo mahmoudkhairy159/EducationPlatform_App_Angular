@@ -1,0 +1,73 @@
+<main id="main" class="main pb-1 mb-1">
+
+    <div class="pagetitle ">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Home</a></li>
+                <li class="breadcrumb-item "><a>Courses</a>
+                </li>
+                <li class="breadcrumb-item active"><a>View Course</a>
+                </li>
+                <li class="breadcrumb-item active "><a>View Lesson</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- End Page Title -->
+
+    <section class="section lesson">
+        <div class="row card-group">
+
+            <div class=" col-xl-12 card">
+                <div class="card-body lesson-card pt-4 d-flex flex-column align-items-center ">
+                    <div class="main_image">
+                        <video style="width: 100%; height:80vh" poster="" controls>
+                          <source src="{{lesson.video}}" type="video/mp4">
+                      </video>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row card-group">
+            <div class=" col-xl-12 card">
+                <div class="card-body pt-3">
+                    <!-- Bordered Tabs -->
+                    <ul class="nav nav-tabs nav-tabs-bordered d-flex justify-content-center align-items-center">
+
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#lesson-overview">
+                              Overview
+                          </button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#lesson-edit">
+                              Edit Lesson
+                          </button>
+                        </li>
+
+                        <li class="nav-item  ">
+                            <form class=" d-inline">
+                                <button type="submit" class="btn btn-danger ">
+                                  Delete Lesson <i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content pt-2">
+                        <app-overview-inside-lesson></app-overview-inside-lesson>
+                        <app-edit-inside-lesson></app-edit-inside-lesson>
+                    </div>
+                    <!-- End Bordered Tabs -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- End #main -->
+<!--
+<app-lessons></app-lessons>
+-->

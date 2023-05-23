@@ -1,0 +1,102 @@
+<div class="tab-pane fade lesson-edit pt-3" id="lesson-edit">
+
+    <!-- Profile Edit Form -->
+    <form>
+        <input hidden type="text" name="course_id" value="">
+
+        <div class="row mb-3">
+            <label for="inputText" class="col-sm-2 col-form-label">Arabic Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="name_ar" value="{{lesson.name_ar}}" placeholder="Enter Arabic Name">
+            </div>
+            <label for="inputText" class="col-sm-2 col-form-label">English Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="name_en" value="{{lesson.name_en}}" placeholder="Enter English Name">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputNumber" class="col-sm-2 col-form-label">Video</label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="file" name="video" id="formFile">
+                <a href="{{lesson.video}}" class="rounded " download>Download <i
+                          class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputNumber" class="col-sm-2 col-form-label">Material</label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="file" name="material" id="formFile"> @if($lesson->material)
+                <a href="{{lesson.material}}" class="rounded " download>Download <i
+                          class="fa-solid fa-download"></i>
+                          </a>
+
+            </div>
+            <div class="row mb-3">
+                <h4>Assignment <span style="color:red" class="fs-5">*optional</span>
+                </h4>
+            </div>
+            <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Assignment</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="file" name="assignment">
+                    <a href="{{lesson.assignment}}" class="rounded " download>Download <i
+                          class="fa-solid fa-download"></i>
+                          </a>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Correct Answer</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="file" name="assignmentCorrectAnswer">
+                    <a href="{{lesson.assignmentCorrectAnswer}}" class="rounded " download>Download <i
+                          class="fa-solid fa-download"></i>
+                          </a>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <h4>Exam <span style="color:red " class="fs-5">*optional</span>
+                </h4>
+            </div>
+            <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Exam</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="file" name="exam">
+                    <a href="{{lesson.exam}}" class="rounded " download>Download <i
+                          class="fa-solid fa-download"></i>
+                          </a>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Correct Answer</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="file" name="examCorrectAnswer">
+                    <a href="{{lesson.examCorrectAnswer}}" class="rounded " download>Download <i
+                          class="fa-solid fa-download"></i>
+                          </a>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputText" class="col-sm-2 col-form-label">Total Mark</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="examTotalMark" value="{{lesson.examTotalMark}}" placeholder="Enter The Total Mark Of Exam ">
+
+                </div>
+            </div>
+
+
+            <div class="row mb-3 justify-content-center">
+                <button type="submit" class="btn btn-primary col-4">Edit Lesson <i
+                  class="fa-sharp fa-solid fa-plus"></i></button>
+            </div>
+
+        </div>
+
+    </form>
+    <!-- End General Form Elements -->
+
+
+</div>
